@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Package Details</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+}
+
+    body {
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 85vh;
+      padding: 1rem;
+      text-align: center;
+}
+
+.instructions-box {
+      background-color: #222;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 0 15px 3px #00ffcc;
+      border: 2px solid #00ffcc;
+}
+
+    h1 {
+      font-size: 1.4rem;
+      color: #00ffcc;
+      margin-bottom: 1rem;
+}
+
+.till-section {
+      margin: 1rem 0;
+      background-color: #333;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.copy-till {
+      font-size: 1.2rem;
+      color: #00ffcc;
+      user-select: all;
+      margin-bottom: 0.5rem;
+}
+
+.copy-btn {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+      background-color: #00ddaa;
+}
+
+    ol {
+      text-align: left;
+      margin-top: 1rem;
+      margin-left: 1rem;
+}
+
+    li {
+      margin-bottom: 0.5rem;
+}
+
+.note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+}
+  </style>
+</head>
+<body>
+  <div class="instructions-box">
+    <h1 id="package-title">Loading package...</h1>
+
+    <div class="till-section">
+      <div class="copy-till" id="till-number">3599278</div>
+      <button class="copy-btn" onclick="copyTill()">Copy Till Number</button>
+    </div>
+
+    <p><strong>How to Pay via M-Pesa</strong></p>
+    <ol>
+      <li>Go to M-Pesa on your phone</li>
+      <li>Select <strong>Lipa na M-Pesa</strong></li>
+      <li>Choose <strong>Buy Goods and Services</strong></li>
+      <li>Enter Till Number: <strong>3599278</strong></li>
+      <li>Input the exact amount for your package</li>
+      <li>Enter your M-Pesa PIN</li>
+      <li>Confirm payment details and send</li>
+      <li>Wait for confirmation SMS</li>
+      <li>Package activates within 5 minutes</li>
+    </ol>
+
+    <div class="note">
+      If you encounter any issues, contact support with your payment confirmation message.
+    </div>
+  </div>
+
+  <script>
+    function copyTill() {
+      const till = document.getElementById("till-number").innerText;
+      navigator.clipboard.writeText(till).then(() => {
+        alert("Till Number copied to clipboard!");
+});
+}
+
+    // Extract package info from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const pkg = params.get("package") || "1 Day - 2GB";
+    const price = params.get("price") || "Ksh 49";
+    const title = document.getElementById("package-title");
+
+    title.textContent = `${pkg} (${price})`;
+  </script>
+</body>
+</html>

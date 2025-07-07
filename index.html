@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starnet Kenya Internet Packages</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+}
+
+    body {
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+      text-align: center;
+      padding: 1rem;
+}
+
+.flyer {
+      background-color: #222;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px 3px #00ffcc;
+      border: 2px solid #00ffcc;
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+    h1 {
+      color: #00ffcc;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+}
+
+.highlight {
+      color: #00ffcc;
+      font-weight: bold;
+      margin-bottom: 1rem;
+}
+
+.package-list {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+}
+
+.package-list a.package {
+      border: 1px solid #00ffcc;
+      border-radius: 8px;
+      padding: 0.75rem;
+      background-color: #333;
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: background-color 0.3s;
+}
+
+.package-list a.package:hover {
+      background-color: #444;
+}
+
+.support-section {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.whatsapp-button {
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+      background-color: #1ebe57;
+}
+
+.whatsapp-button.material-icons {
+      margin-right: 0.5rem;
+}
+
+.email-link {
+      margin-top: 0.8rem;
+      color: #00aaff;
+      font-weight: bold;
+      text-decoration: none;
+}
+
+.email-link:hover {
+      text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+  <div class="flyer">
+    <h1>Starnet Kenya Internet Packages</h1>
+    <p class="highlight">Available on All Networks</p>
+
+    <div class="package-list">
+      <a href="package.html?package=1+Day+-+2GB&price=Ksh+49" class="package"><strong>1 Day</strong> – 2GB @ Ksh 49</a>
+      <a href="package.html?package=3+Days+-+5GB&price=Ksh+59" class="package"><strong>3 Days</strong> – 5GB @ Ksh 59</a>
+      <a href="package.html?package=7+Days+-+10GB&price=Ksh+69" class="package"><strong>7 Days</strong> – 10GB @ Ksh 69</a>
+      <a href="package.html?package=14+Days+-+25GB&price=Ksh+79" class="package"><strong>14 Days</strong> – 25GB @ Ksh 79</a>
+      <a href="package.html?package=30+Days+-+Unlimited&price=Ksh+99" class="package"><strong>30 Days</strong> – Unlimited @ Ksh 99</a>
+    </div>
+
+    <div class="support-section">
+      <p>Need help? Contact our support team:</p>
+      <a href="https://wa.me/254705691318?text=hello+I+need+help+in+purchasing+a+data+package" target="_blank" class="whatsapp-button">
+        <span class="material-icons">chat</span> WhatsApp Support
+      </a>
+      <p style="margin-top:0.5rem;">or through <a href="mailto:starnetkenya@gmail.com" class="email-link">email us</a></p>
+    </div>
+  </div>
+</body>
+</html>
