@@ -121,6 +121,41 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: -1;
     }
+
+    @keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -300px 0;
+}
+  100% {
+    background-position: 300px 0;
+}
+}
+
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  animation: fadeUp 1.5s ease-out;
+  position: relative;
+  background-image: linear-gradient(90deg, #888, #fff, #888);
+  background-size: 300px 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: fadeUp 1.5s ease-out, shimmer 3s linear infinite;
+}
   </style>
 </head>
 <body>
@@ -142,6 +177,7 @@
         <span class="material-icons">chat</span> WhatsApp Support
       </a>
       <p style="margin-top:0.5rem;">or through <a href="mailto:starnetkenya@gmail.com" class="email-link">email us</a></p>
+      <p class="copyright">© 2025 Starnet Kenya. All rights reserved.</p>
     </div>
   </div>
 </body>
