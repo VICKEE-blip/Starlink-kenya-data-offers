@@ -87,6 +87,36 @@
       font-size: 0.9rem;
       color: #ccc;
 }
+
+    .info-box {
+  position: relative;
+  background: #f9f9f9;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.understood-btn {
+  background: #2e7d32;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -113,6 +143,14 @@
 
     <div class="note">
       If you encounter any issues, contact support with your payment confirmation message.
+      <div id="infoBox" class="info-box">
+  <button class="close-btn" onclick="collapseInfo()">×</button>
+  <div class="info-content">
+    <h3>Important Info</h3>
+    <p>This is your updated M-Pesa info section or message.</p>
+    <button class="understood-btn" onclick="collapseInfo()">Understood</button>
+  </div>
+      </div>
     </div>
   </div>
 
@@ -131,6 +169,11 @@
     const title = document.getElementById("package-title");
 
     title.textContent = `${pkg} (${price})`;
+  <script>
+  function collapseInfo() {
+    document.getElementById("infoBox").style.display = "none";
+}
   </script>
+</script>
 </body>
 </html>
